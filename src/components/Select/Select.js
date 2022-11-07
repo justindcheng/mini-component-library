@@ -9,13 +9,13 @@ const Select = ({ label, value, onChange, children }) => {
   const displayedValue = getDisplayedValue(value, children);
 
   return <Wrapper style={{'--borderRadius': '8px'}}>
-      <StyledSelect value={value} onChange={onChange}>
-        {children}
-      </StyledSelect>
       <span>{displayedValue}</span>
       <IconWrapper>
         <Icon id='chevron-down' size='24px' strokeWidth='2'/>
       </IconWrapper>
+      <StyledSelect value={value} onChange={onChange}>
+        {children}
+      </StyledSelect>
     </Wrapper>
   ;
 };
